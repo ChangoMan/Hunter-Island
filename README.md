@@ -27,6 +27,20 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Hunter Island
+# Hunter Island
 
-### Notes
+## Notes
+
+Starting with a Class based React Component, we will return some JSX:
+
+```
+class App extends React.Component {
+  render() {
+    return <div>hunter island</div>
+  }
+}
+```
+
+https://reactjs.org/docs/introducing-jsx.html
+
+You can input any valid [JavaScript Expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) inside the curly braces in JSX
