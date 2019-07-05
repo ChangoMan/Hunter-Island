@@ -32,24 +32,20 @@ class App extends React.Component {
     return (
       <div className="container">
         <form>
-          <div className="form-field">
-            <label>First Name:</label>
-            <input
-              name="firstName"
-              type="text"
-              value={this.state.firstName}
-              onChange={this.changeFirstName}
-            />
-          </div>
-          <div className="form-field">
-            <label>Last Name:</label>
-            <input
-              name="lastName"
-              type="text"
-              value={this.state.lastName}
-              onChange={this.changeLastName}
-            />
-          </div>
+          <FormField
+            label="First Name"
+            name="firstName"
+            type="text"
+            value={this.state.firstName}
+            onChange={this.changeInput}
+          />
+          <FormField
+            label="Last Name"
+            name="lastName"
+            type="text"
+            value={this.state.lastName}
+            onChange={this.changeInput}
+          />
           <FormField
             label="Email:"
             name="email"
