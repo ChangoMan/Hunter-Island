@@ -1,0 +1,18 @@
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  min-width: 200px;
+  padding: 8px;
+}
