@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import FormField from "./components/FormField";
+import Box from "./components/Box";
 
 class App extends React.Component {
   state = {
@@ -15,11 +16,16 @@ class App extends React.Component {
     });
   };
 
+  onFormSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+  };
+
   render() {
     return (
       <div className="container">
-        <div className="box">
-          <form>
+        <Box>
+          <form onSubmit={this.onFormSubmit}>
             <FormField
               label="First Name"
               name="firstName"
@@ -41,16 +47,17 @@ class App extends React.Component {
               value={this.state.email}
               onChange={this.changeInput}
             />
+            <button type="submit">Submit</button>
           </form>
-        </div>
-        <div className="box">
+        </Box>
+        <Box>
           <h3>First Name:</h3>
           <p>{this.state.firstName}</p>
           <h3>Last Name:</h3>
           <p>{this.state.lastName}</p>
           <h3>Email:</h3>
           <p>{this.state.email}</p>
-        </div>
+        </Box>
       </div>
     );
   }
