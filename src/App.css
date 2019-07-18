@@ -29,3 +29,7 @@ body {
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.75);
 }
+
+.dino {
+  max-width: 200px;
+}

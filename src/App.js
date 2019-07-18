@@ -7,7 +7,21 @@ class App extends React.Component {
   state = {
     firstName: "",
     lastName: "",
-    email: ""
+    email: "",
+    images: []
+  };
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData = async () => {
+    // API made with https://www.mocky.io
+    const res = await fetch("http://www.mocky.io/v2/5d30c029320000b0572046d3");
+    const data = await res.json();
+    this.setState({
+      images: data.response
+    });
   };
 
   changeInput = event => {
@@ -58,6 +72,14 @@ class App extends React.Component {
           <h3>Email:</h3>
           <p>{this.state.email}</p>
         </Box>
+        {this.state.images.map(dino => (
+          <img
+            key={dino.id}
+            className="dino"
+            src={dino.image}
+            alt={dino.name}
+          />
+        ))}
       </div>
     );
   }

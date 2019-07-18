@@ -1,0 +1,40 @@
+{
+  "response": [
+    {
+      "id": 1,
+      "name": "andy",
+      "image": "https://i.imgur.com/fFEvSUN.png",
+      "points": 5
+    },
+    {
+      "id": 2,
+      "name": "jlee",
+      "image": "https://i.imgur.com/zkSwzhA.png",
+      "points": -1
+    },
+    {
+      "id": 3,
+      "name": "gerk",
+      "image": "https://i.imgur.com/BjVRCq3.png",
+      "points": 5
+    },
+    {
+      "id": 4,
+      "name": "anson",
+      "image": "https://i.imgur.com/2FGnFyv.png",
+      "points": 1
+    },
+    {
+      "id": 5,
+      "name": "grehg",
+      "image": "https://i.imgur.com/KKZabzz.png",
+      "points": 2
+    },
+    {
+      "id": 6,
+      "name": "hunter",
+      "image": "https://i.imgur.com/iNZFEE3.png",
+      "points": 10
+    }
+  ]
+}
