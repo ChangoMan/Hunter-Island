@@ -77,4 +77,8 @@ Adding `changeFirstName () => {}` and the onChange to the first name input box. 
 
 Intro into Functional React Components, which are simpler to write. A functional component is essentially just the `render(){}` method part of a React Class Component.
 
-Explore passing in props to a Functional Component.
+Explore passing in props to a Functional Component. Explore the different things that can be passed as props.
+
+### Create the Box Component
+
+Looking at the `children` prop and how it works.
