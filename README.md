@@ -82,3 +82,7 @@ Explore passing in props to a Functional Component. Explore the different things
 ### Create the Box Component
 
 Looking at the `children` prop and how it works.
+
+### Bonus Fetching Data
+
+If you are done or if we have time, fetch this data and display the images to the screen: http://www.mocky.io/v2/5d30c029320000b0572046d3
