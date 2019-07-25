@@ -30,3 +30,50 @@ body {
   margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.75);
 }
+
+.loader {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -16px;
+  width: 32px;
+  height: 32px;
+  border: 3px solid transparent;
+  border-top-color: green;
+  border-bottom-color: green;
+  border-radius: 32px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.profile {
+  padding: 10px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  width: 220px;
+  height: 220px;
+  border-radius: 220px;
+}
+
+.profile img {
+  object-fit: contain;
+  width: 180px;
+  height: 180px;
+  margin: 20px;
+}
