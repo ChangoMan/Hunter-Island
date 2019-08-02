@@ -56,7 +56,10 @@ class App extends React.Component {
     return (
       <div className="container">
         {this.state.formSubmitted ? (
-          <UserProfile />
+          <UserProfile
+            firstName={this.state.firstName}
+            lastName={this.state.lastName}
+          />
         ) : (
           <div>
             <div className="box">
