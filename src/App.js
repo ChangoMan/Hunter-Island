@@ -1,31 +1,32 @@
-import React from 'react';
-import './App.css';
-import FormField from './components/FormField';
-import UserProfile from './components/UserProfile';
+import React from "react";
+import "./App.css";
+import FormField from "./components/FormField";
+import Hooks from "./components/Hooks";
+import UserProfile from "./components/UserProfile";
 
 class App extends React.Component {
   state = {
-    firstName: '',
-    lastName: '',
+    firstName: "",
+    lastName: "",
     invalidFields: [],
     formSubmitted: false
   };
 
   onChange = event => {
     this.setState({
-      [event.target.name]: event.target.value
+      firstName: event.target.value
     });
   };
 
   onFormSubmitted = event => {
     event.preventDefault();
     if (this.validateFields()) {
-      console.log('✅ fields validated, please submit form');
+      console.log("✅ fields validated, please submit form");
       this.setState({
         formSubmitted: true
       });
     } else {
-      console.log('🐙 fields NOT valid');
+      console.log("🐙 fields NOT valid");
     }
   };
 
@@ -33,12 +34,12 @@ class App extends React.Component {
     const { firstName, lastName } = this.state;
     const invalidFields = [];
 
-    if (firstName === '') {
-      invalidFields.push('firstName');
+    if (firstName === "") {
+      invalidFields.push("firstName");
     }
 
-    if (lastName === '') {
-      invalidFields.push('lastName');
+    if (lastName === "") {
+      invalidFields.push("lastName");
     }
 
     this.setState({
@@ -55,8 +56,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
+        <Hooks />
         {this.state.formSubmitted ? (
-          <UserProfile />
+          <UserProfile firstName={this.state.firstName} lastName={this.state.lastName} />
         ) : (
           <div>
             <div className="box">
@@ -66,14 +68,14 @@ class App extends React.Component {
                   name="firstName"
                   value={this.state.firstName}
                   onChange={this.onChange}
-                  error={this.state.invalidFields.includes('firstName')}
+                  error={this.state.invalidFields.includes("firstName")}
                 />
                 <FormField
                   label="Last Name"
                   name="lastName"
                   value={this.state.lastName}
                   onChange={this.onChange}
-                  error={this.state.invalidFields.includes('lastName')}
+                  error={this.state.invalidFields.includes("lastName")}
                 />
                 <input type="submit" value="Submit" />
               </form>
